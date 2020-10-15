@@ -14,7 +14,7 @@ import pandas as pd
 from dotenv import load_dotenv
 from spotipy.oauth2 import SpotifyClientCredentials
 
-app = dash.Dash(__name__, meta_tags=[{"name": "viewport", "content": "width=device-width"}])
+app = dash.Dash(__name__)
 
 app.title = 'HITIFY'
 
@@ -119,6 +119,7 @@ def build_table():
                         id="metric-div",
                         children=[
                             html.Table(make_dash_table(pd.read_csv('data/variables.csv')))
+
                         ],
                     ),
                 ],
@@ -424,4 +425,4 @@ def render_tab_content(tab_switch):
 
 # Running the server
 if __name__ == "__main__":
-    app.run_server(debug=True, port=8050)
+    app.run_server(debug=True,dev_tools_ui=False,dev_tools_props_check=False)
