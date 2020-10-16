@@ -300,19 +300,18 @@ body {
 #uri {
   margin-left:30%;
   margin-top:5%;
-  width: 50%;
+  width: auto;
   margin-bottom: 0rem;
 }
 
 #input_uri {
-  width:40%;
   color: white !important;
   background-color: #000000 !important;
   border-radius: 4px;
-  height: 40px;
+  width: 300px;
   line-height: 40px;
-  margin-top:8%;
-  margin-left:25%;
+  margin-left:8vw;
+  margin-top:20px;
 }
 
 #card-1 {
@@ -618,8 +617,14 @@ body {
   color: white !important;
   background-color: #1d202d !important;
   border: 1px solid #1DB954 !important;
-  margin-left:20px;
+  margin-left:2vw;
   }
+
+#uri-div {
+  width:auto;
+  height:100%;
+
+}
 
 #stop-button > div > button:hover {
   color: #91dfd2 !important;

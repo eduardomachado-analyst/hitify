@@ -131,7 +131,7 @@ def build_table():
 
 def build_tab_2(text=None):
     return html.Div(
-        id="container",
+        id="column",
         children=[
             html.Div(
                 id="title-card",
@@ -144,12 +144,8 @@ def build_tab_2(text=None):
                     html.Img(id="uri", src=app.get_asset_url("uri_song.png"))
                 ],
             ),
-            html.Div(
-                id="container",
-                children=[dcc.Input(id="input_uri", type="text", placeholder="Spotify URI", value=text),
-                          html.Button("Let's go!", id='submit-val', n_clicks=0)],
-            ),
-
+            dcc.Input(id="input_uri", type="text", placeholder="Spotify URI", value=text, autoComplete="on"),
+            html.Button("Let's go!", id='submit-val', n_clicks=0)
         ],
     )
 
